@@ -1,18 +1,31 @@
-# FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing
+<div align="center">
+<h1>FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing</h1>
 
+<a href="https://doi.org/10.1145/3749551" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/IMWUT (UbiComp)-10.1145/3749551-blue" alt="Paper">
+</a>
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 
-## Introduction
+**[University of Science and Technology of China](https://www.ustc.edu.cn/)**, **[Precise Pervasive Lab (PPLab)](https://pplab.ustc.edu.cn/main.htm)**
 
-This repository is the official PyTorch implementation for IMWUT (UbiComp) 2025 paper:
-[**FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing**](https://doi.org/10.1145/3749551)
+[Qijun Ying](https://gaigey.github.io/), [Zehua Cao](https://scholar.google.com/citations?user=jU6kdSIAAAAJ&hl=en), [Ziyu Wu](http://home.ustc.edu.cn/~wzy1999/), Wenwu Deng, Yuchen Zhong, Yukun Diao, [Xiaohui Cai](https://scholar.google.com/citations?user=uypjEiYAAAAJ&hl)*
 
 ![Overview](./assets/over_picture.jpg)
+</div>
+
+```bibtex
+@article{ying2025form,
+  title={FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing},
+  author={Qijun Ying, Zehua Cao, Ziyu Wu, Wenwu Deng, Yuchen Zhong, Yukun Diao, Xiaohui Cai},
+  journal={Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)},
+  year={2025}
+}
+```
 
 ## Installation
 
 ### 1. Python Environment Setup
-Install the required Python packages using pip:
+Prepare your Python (>=3.8) environment and install the required Python packages using pip:
 ```bash
 pip install -r requirements.txt
 ```
@@ -33,6 +46,19 @@ Download the pre-trained model checkpoint (FoRM.pth) and place it in the followi
 $workspace/checkpoint/FoRM.pth
 ```
 > Note: The download link for the model checkpoint will be provided soon.
+
+## Project Structure
+
+The project directory structure is organized as follows:
+```
+FoRM/
+├── assets/                # Contains SMPL models and other static resources
+│   └── smplx_models/
+│       └── smpl/          # SMPL model files (e.g., SMPL_NEUTRAL.pkl)
+├── checkpoint/            # Pre-trained model checkpoints (e.g., FoRM.pth)
+├── data/                  # Dataset files and preprocessed data
+├── lib/                   # Core library code and utilities
+```
 
 ## HAMPI Dataset
 
@@ -68,23 +94,10 @@ Note: Reported metrics may vary slightly (±0.1%) due to:
 
 ## TODO
 
-- [ ] HAMPI Dataset release
 - [x] Evaluation scripts release
+- [ ] HAMPI Dataset release
 - [ ] Checkpoints and assests release
 - [ ] Training scripts release
-
-## Citation
-
-Please cite the following paper if you use this code directly or indirectly in your research/projects:
-
-```
-@article{ying2025form,
-  title={FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing},
-  author={Qijun Ying, Zehua Cao, Ziyu Wu, Wenwu Deng, Yuchen Zhong, Yukun Diao, Xiaohui Cai},
-  journal={Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)},
-  year={2025}
-}
-```
 
 ## Acknowledgments
 Partial code is adapted from [PIP](https://github.com/Xinyu-Yi/PIP), [WHAM](https://github.com/yohanshin/WHAM), and [GroundLink](https://github.com/hanxingjian/GroundLink).
