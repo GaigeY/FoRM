@@ -1,34 +1,42 @@
-# FoRM: Foot-driven Reconstruction of Human Motion using Dual-Modal Plantar Pressure and Inertial Sensing
+# FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing
 
-This repository contains the official PyTorch implementation of:
+<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 
-> **FoRM: Foot-driven Reconstruction of Human Motion using Dual-Modal Plantar Pressure and Inertial Sensing** 
->
-> Qijun Ying, Zehua Cao, Ziyu Wu, Wenwu Deng, Yuchen Zhong, Yukun Diao, Xiaohui Cai*
->
-> [Paper]() | [Project Page]()
+## Introduction
+
+This repository is the official PyTorch implementation for IMWUT (UbiComp) 2025 paper:
+[**FoRM: Foot-driven Reconstruction of Human Motion Using Dual-Modal Plantar Pressure and Inertial Sensing**](https://doi.org/10.1145/3749551)
 
 ![Overview](./assets/over_picture.jpg)
 
 ## Installation
 
-To set up the environment, install the required packages using pip:
-
+### 1. Python Environment Setup
+Install the required Python packages using pip:
 ```bash
 pip install -r requirements.txt
 ```
 
-In current version, you can directly run the code using the provided assets, checkpoints, and data.
-
 Key dependencies include:
+- `PyTorch (>=1.10.0)` for model training/inference
+- `joblib` for data loading utilities
 
-- PyTorch (>=1.10.0) for model training/inference
-- SMPL for body model parameterization
-- Joblib for data loading utilities
+### 2. SMPL Model Setup
+Download the SMPL neutral model from [here](https://smpl.is.tue.mpg.de/download.php) (select "Download version 1.1.0 for Python 2.7 (female/male/neutral, 300 shape PCs)" and use the file `basicmodel_neutral_lbs_10_207_0_v1.1.0.pkl`). Place it in the following directory:
+```bash
+$workspace/assets/smplx_models/smpl/SMPL_NEUTRAL.pkl
+```
+
+### 3. Model Checkpoint Setup
+Download the pre-trained model checkpoint (FoRM.pth) and place it in the following directory:
+```bash
+$workspace/checkpoint/FoRM.pth
+```
+> Note: The download link for the model checkpoint will be provided soon.
 
 ## HAMPI Dataset
 
-The HAMPI dataset consists of synchronized plantar pressure and inertial measurements with corresponding motion capture data. Currently, only the validation split is publicly available for research purposes.
+The HAMPI dataset consists of synchronized plantar pressure and inertial measurements with corresponding motion capture data.
 
 Dataset specifications:
 
@@ -87,4 +95,4 @@ This repository is released under the MIT License.
 
 ## Contact
 
-Please contact yqj@mail.ustc.edu.cn for any questions related to this work.
+Please contact [Qijun Ying](yqj@mail.ustc.edu.cn) for any questions related to this work.
