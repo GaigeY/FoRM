@@ -22,6 +22,10 @@
 }
 ```
 
+## News
+- [2025.09.12] We have released the HAMPI dataset and FoRMNet checkpoints.
+- [2025.09.01] Our paper has been published in **IMWUT 2025**!
+
 ## Installation
 
 ### 1. Python Environment Setup
@@ -41,9 +45,9 @@ $workspace/assets/smplx_models/smpl/SMPL_NEUTRAL.pkl
 ```
 
 ### 3. Model Checkpoint Setup
-Download the pre-trained model checkpoint (FoRM.pth) and place it in the following directory:
+Download the pre-trained model checkpoint (FoRM.pth) from [this link](http://210.45.71.78:8888/d/8c2d3cb26995494e87a8/) and place it in the following directory:
 ```bash
-$workspace/checkpoint/FoRM.pth
+$workspace/FoRM/checkpoint/FoRM.pth
 ```
 > Note: The download link for the model checkpoint will be provided soon.
 
@@ -54,10 +58,15 @@ The project directory structure is organized as follows:
 FoRM/
 ├── assets/                # Contains SMPL models and other static resources
 │   └── smplx_models/
-│       └── smpl/          # SMPL model files (e.g., SMPL_NEUTRAL.pkl)
+│       └── smpl/         # SMPL model files (e.g., SMPL_NEUTRAL.pkl)
 ├── checkpoint/            # Pre-trained model checkpoints (e.g., FoRM.pth)
+│   └── FoRM.pth
 ├── data/                  # Dataset files and preprocessed data
+│   └── HAMPI/
+│       ├── S01/
+│       └── S../
 ├── lib/                   # Core library code and utilities
+└── eval.py
 ```
 
 ## HAMPI Dataset
@@ -74,7 +83,12 @@ Dataset specifications:
 
 Please see LICENSE for usage terms and citation requirements.
 
-> We have prepared the dataset ready. We would release the dataset as soon as the paper is published.
+You can download HAMPI dataset via the following links:
+- [PPLab Seafile link](http://210.45.71.78:8888/d/728edd617f184d7c9c97/)
+> We are considering other platforms like OneDrive, BaiduDrive or Huggingface.
+> Contact us please if you are getting in trouble with downloading the dataset.
+> 
+> We are also planning to introduce a mature toolkit from AutoDesk to solve the elbow failure cases.
 
 <!-- ## Training -->
 
@@ -95,8 +109,8 @@ Note: Reported metrics may vary slightly (±0.1%) due to:
 ## TODO
 
 - [x] Evaluation scripts release
-- [ ] HAMPI Dataset release
-- [ ] Checkpoints and assests release
+- [x] HAMPI Dataset release
+- [x] Checkpoints and assests release
 - [ ] Training scripts release
 
 ## Acknowledgments
