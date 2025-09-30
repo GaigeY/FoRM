@@ -81,6 +81,7 @@ Dataset specifications:
   - SMPL pose parameters (60Hz)
   - Noitom motion capture refined output (60Hz)
 
+All our released meta data are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 Please see LICENSE for usage terms and citation requirements.
 
 You can download HAMPI dataset via the following links:
