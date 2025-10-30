@@ -107,11 +107,23 @@ Note: Reported metrics may vary slightly (±0.1%) due to:
 - Random seed initialization in probabilistic components
 - Minor version differences in dependency libraries
 
+## Demo
+To use our approach with your data, you can use our demo script.
+
+First, please prepare your data with normalized forces_4x2, imu acc and imu gyro.
+Then run the following demo script:
+```bash
+python demo.py --input /path/to/input_data.pth --output /path/to/output_result.pth
+```
+
+We can obtain the inferred SMPL human motion sequence now.
+
 ## TODO
 
 - [x] Evaluation scripts release
 - [x] HAMPI Dataset release
-- [x] Checkpoints and assests release
+- [x] Checkpoints and assets release
+- [x] Inference demo script release
 - [ ] Training scripts release
 
 ## Acknowledgments
