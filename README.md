@@ -45,11 +45,11 @@ $workspace/assets/smplx_models/smpl/SMPL_NEUTRAL.pkl
 ```
 
 ### 3. Model Checkpoint Setup
-Download the pre-trained model checkpoint (FoRM.pth) from [this link](http://210.45.71.78:8888/d/8c2d3cb26995494e87a8/) and place it in the following directory:
+Download the pre-trained model checkpoint (FoRM.pth) from [this link](https://huggingface.co/Qujeen/FoRM/blob/main/FoRM.pth) and place it in the following directory:
 ```bash
 $workspace/FoRM/checkpoint/FoRM.pth
 ```
-> Note: The download link for the model checkpoint will be provided soon.
+Download from [Hugging Face](https://huggingface.co/Qujeen/FoRM), or use `hf download Qujeen/FoRM FoRM.pth --local-dir checkpoint`.
 
 ## Project Structure
 
@@ -81,12 +81,13 @@ Dataset specifications:
   - SMPL pose parameters (60Hz)
   - Noitom motion capture refined output (60Hz)
 
-All our released meta data are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-Please see LICENSE for usage terms and citation requirements.
+The HAMPI dataset is released under the [HAMPI Dataset License Agreement](https://huggingface.co/datasets/Qujeen/HAMPI/blob/main/LICENSE.txt): academic and non-commercial use only, with citation required. Redistribution, republication, or mirroring requires prior written permission from the authors. Attempts to identify participants are prohibited.
+See the dataset license for full terms. The MIT license in this code repository applies to the code; it does not replace the dataset license.
 
 You can download HAMPI dataset via the following links:
-- [PPLab Seafile link](http://210.45.71.78:8888/d/728edd617f184d7c9c97/)
-> We are considering other platforms like OneDrive, BaiduDrive or Huggingface.
+- [Hugging Face: HAMPI dataset](https://huggingface.co/datasets/Qujeen/HAMPI)
+
+Download all release files with `hf download Qujeen/HAMPI --repo-type dataset --local-dir data/HAMPI`. The release includes subject archives S01.rar through S18.rar and a separate HAMPI test set.rar archive. Extract the required archives before evaluation.
 > Contact us please if you are getting in trouble with downloading the dataset.
 > 
 > We are also planning to introduce a mature toolkit from AutoDesk to solve the elbow failure cases.
@@ -136,3 +137,4 @@ This repository is released under the MIT License.
 ## Contact
 
 Please contact [Qijun Ying](yqj@mail.ustc.edu.cn) for any questions related to this work.
+
